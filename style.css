@@ -1,84 +1,112 @@
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background: #4CAF50;
+    background-color: #333;
     color: white;
-    padding: 10px 0;
+    padding: 1em 0;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em;
+}
+
+header nav ul li a:hover {
+    background-color: #555;
+    border-radius: 4px;
 }
 
 .container {
     display: flex;
-}
-
-nav {
-    width: 200px;
-    background: #f4f4f4;
-    padding: 10px;
-    position: fixed;
-    height: 100%;
-    overflow-y: auto;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    margin-bottom: 10px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    display: block;
-    padding: 5px 10px;
-    border-radius: 4px;
-}
-
-nav ul li a:hover {
-    background: #ddd;
+    flex-direction: column;
+    padding-top: 5em; /* Adjusted for fixed header */
 }
 
 main {
-    margin-left: 220px;
-    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1em;
+    line-height: 1.6;
 }
 
-h1, h2, h3, h4 {
-    color: #333;
+h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5em;
+    margin-top: 2em;
+}
+
+h3 {
+    margin-top: 1.5em;
+}
+
+h4 {
+    margin-top: 1.2em;
+}
+
+ul {
+    margin: 1em 0;
+    padding-left: 1.5em;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
+    margin: 1em 0;
 }
 
 table, th, td {
     border: 1px solid #ddd;
-    padding: 8px;
-}
-
-th {
-    background: #f4f4f4;
-    text-align: left;
 }
 
 th, td {
-    padding: 10px;
+    padding: 0.5em;
+    text-align: left;
 }
 
-ul {
-    padding-left: 20px;
+th {
+    background-color: #f4f4f4;
 }
 
-ul li {
-    margin-bottom: 10px;
+#kanban {
+    display: flex;
+    gap: 1em;
+    overflow-x: auto;
+}
+
+.kanban-column {
+    flex: 0 0 200px;
+    border: 1px solid #ddd;
+    padding: 1em;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+canvas {
+    margin-top: 1em;
 }
