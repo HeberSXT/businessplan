@@ -1,10 +1,43 @@
+Here is the updated code with the images and charts added:
+
+### `index.html`
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soma XT Business Plan</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Quarter', 'Revenue', 'Expenses'],
+          ['Q1 2024',  500000,  400000],
+          ['Q2 2024',  700000,  450000],
+          ['Q3 2024',  1000000,  490000],
+          ['Q4 2024',  1500000,  530000],
+          ['Q1 2025',  2000000,  560000],
+          ['Q2 2025',  2500000,  600000],
+          ['Q3 2025',  2900000,  640000],
+          ['Q4 2025',  3000000,  690000]
+        ]);
+
+        var options = {
+          title: 'Company Performance',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
 </head>
 <body>
     <header>
@@ -32,6 +65,7 @@
         <main>
             <section id="executive-summary">
                 <h2>Executive Summary</h2>
+                <img src="path/to/executive_summary.jpg" alt="Executive Summary Image" style="width:100%; height:auto; margin-bottom:20px;">
                 <p><strong>Business Name:</strong> Soma XT</p>
                 <p><strong>Business Description:</strong> Soma XT, in partnership with CQG, is developing a cutting-edge OTC trading platform that integrates trading, risk management, and margin call financing. This platform will cater to commodity hedgers, market makers, and financiers, providing a seamless, transparent, and efficient trading experience. Phase 1 leverages CQG's existing OTC platform, while Phase 2 focuses on complex, exotic, and structured products, along with advanced risk management and lifecycle management tools. Additionally, we plan to acquire a small software house with an existing OTC platform, codenamed "Project BluePrint," to accelerate our Phase 2 implementation and provide immediate revenue opportunities.</p>
                 <p><strong>Mission Statement:</strong> To transform OTC trading by offering an open, agnostic platform that combines trading, risk management, and financing, enhancing transparency, efficiency, and accessibility for all market participants.</p>
@@ -46,6 +80,7 @@
                 <h2>Market Analysis</h2>
                 <h3>Industry Overview</h3>
                 <p>The global commodity trading market is diverse, with significant demand for customized OTC trading solutions. Hedgers often face liquidity challenges in covering margin calls, while market makers seek platforms that support their pricing and risk management needs. Additionally, the global nature of commodities trading introduces FX risk, which needs to be effectively managed. The market for energy and metals is particularly significant due to their global demand and price volatility.</p>
+
                 <h3>Geographic Focus and Market Segmentation</h3>
                 <p>All data from 2022</p>
                 <table>
@@ -103,7 +138,9 @@
                         <tr>
                             <td></td>
                             <td>Ukraine</td>
-                            <td>Wheat (25M tons), Sunflower Oil (4.5M tons)</td>
+                            <td>Wheat (25M tons), Sun
+
+flower Oil (4.5M tons)</td>
                             <td>FAO, Ukrstat</td>
                         </tr>
                         <tr>
@@ -156,6 +193,7 @@
                         </tr>
                     </tbody>
                 </table>
+
                 <h3>Market Size and Potential</h3>
                 <table>
                     <thead>
@@ -191,11 +229,12 @@
                         </tr>
                     </tbody>
                 </table>
+
                 <h3>Target Customers</h3>
                 <ul>
-                    <li><strong>Producers:</strong> Farmers, ranchers, oil and gas producers, mining companies, cooperative organizations.</li>
-                    <li><strong>Consumers:</strong> Food processors, manufacturers, energy companies, metal fabricators, retailers.</li>
-                    <li><strong>Intermediaries:</strong> Traders, brokers, elevators, processors.</li>
+                    <li>Producers: Farmers, ranchers, oil and gas producers, mining companies, cooperative organizations.</li>
+                    <li>Consumers: Food processors, manufacturers, energy companies, metal fabricators, retailers.</li>
+                    <li>Intermediaries: Traders, brokers, elevators, processors.</li>
                 </ul>
             </section>
 
@@ -213,6 +252,7 @@
                     <li><strong>Lifecycle Management:</strong> Manage the complex lifecycle of exotic products, including daily events like barriers.</li>
                     <li><strong>Portfolio Management:</strong> Integrated view of exchange-like trades and exotic products, with tools for trading out of the portfolio, running VaR, and stress scenarios.</li>
                 </ul>
+
                 <h3>Product Library</h3>
                 <ul>
                     <li>Vanilla Options</li>
@@ -221,6 +261,7 @@
                     <li>Structured Products: Accumulators, Decumulators, TARFs, Range Accruals</li>
                     <li>Volatility Products: Volatility Swaps, Variance Swaps</li>
                 </ul>
+
                 <h3>OTC Specifications</h3>
                 <table>
                     <thead>
@@ -273,8 +314,11 @@
                     <li><strong>Immediate Margin Call Coverage:</strong> Provides quick access to capital for margin calls.</li>
                     <li><strong>Extended Financing Options:</strong> Financing for other hedging-related expenses.</li>
                     <li><strong>Competitive Terms:</strong> Attractive interest rates and flexible repayment schedules.</li>
-                    <li><strong>Automated Processes:</strong> Streamlined application, approval, and disbursement.</li>
+                    <li><strong>Automated Processes:</strong> Streamlined
+
+ application, approval, and disbursement.</li>
                 </ul>
+
                 <h3>Financier Integration</h3>
                 <ul>
                     <li><strong>Credit Risk Management:</strong> Rigorous credit assessments and collateral management.</li>
@@ -290,6 +334,7 @@
                     <li><strong>Compliance Mapping:</strong> Comprehensive mapping of regulatory requirements across jurisdictions.</li>
                     <li><strong>Data Standards:</strong> Ensuring compliance with EMIR, Dodd-Frank, MiFID II, and other standards.</li>
                 </ul>
+
                 <h3>Trade Confirmations</h3>
                 <ul>
                     <li><strong>ISDA-Like Legal Terms:</strong> Automated generation of trade confirmations with standard legal terms.</li>
@@ -305,6 +350,7 @@
                     <li><strong>Compliance Alerts:</strong> Automated alerts for regulatory breaches and margin requirements.</li>
                     <li><strong>Detailed Reporting:</strong> Comprehensive tools for historical and real-time analysis.</li>
                 </ul>
+
                 <h3>Commodity Price Risk Management</h3>
                 <ul>
                     <li><strong>Real-Time Rates:</strong> Integration with data providers to access real-time rates.</li>
@@ -323,6 +369,7 @@
                     <li><strong>Automated Hedging:</strong> Integrate automated hedging to mitigate risk.</li>
                     <li><strong>Reporting and Analytics:</strong> Advanced tools for position, PnL, and risk analysis.</li>
                 </ul>
+
                 <h3>Technical Integration</h3>
                 <ul>
                     <li><strong>API Development:</strong> APIs and interfaces for seamless integration with market makers' systems.</li>
@@ -339,17 +386,20 @@
                     <li><strong>Social Media:</strong> Active presence on LinkedIn, Twitter, and other platforms.</li>
                     <li><strong>Paid Advertising:</strong> Targeted Google Ads and LinkedIn Ads.</li>
                 </ul>
+
                 <h3>Partnerships</h3>
                 <ul>
                     <li><strong>Financial Institutions:</strong> Collaborations to offer Soma XT as part of their suite.</li>
                     <li><strong>Commodity Producers and Consumers:</strong> Tailored risk management solutions.</li>
                     <li><strong>Market Makers and Financiers:</strong> Highlighting platform capabilities for market risk management and margin call financing.</li>
                 </ul>
+
                 <h3>Sales Team</h3>
                 <ul>
                     <li><strong>Dedicated Sales Team:</strong> Trained experts in listed and OTC trading.</li>
                     <li><strong>Client Acquisition:</strong> High-touch client acquisition strategies.</li>
                 </ul>
+
                 <h3>Industry Engagement</h3>
                 <ul>
                     <li><strong>Trade Shows and Conferences:</strong> Participation in major industry events.</li>
@@ -365,36 +415,43 @@
                     <li><strong>Subscription Fees:</strong> Monthly or annual subscription fees for accessing the platform, with tiered levels based on access and features (e.g., basic, advanced, premium).</li>
                     <li><strong>Module Fees:</strong> Separate fees for different modules within the platform, such as advanced analytics, risk management tools, market maker tools, and financing capabilities.</li>
                 </ul>
+
                 <h3>Commissions per Contract</h3>
                 <ul>
                     <li><strong>Transaction Fees:</strong> Commission on each trade executed on the platform, either a fixed fee per contract or a percentage of the transaction value.</li>
                     <li><strong>Volume-Based Discounts:</strong> Discounts on transaction fees based on trading volume to incentivize high-volume trading.</li>
                 </ul>
+
                 <h3>Spreads Between Customer Trade Price and Book</h3>
                 <ul>
                     <li><strong>Bid-Ask Spread:</strong> Capture the spread between the bid and ask prices quoted to customers, adjusted based on market conditions and risk profile.</li>
                     <li><strong>Market Making:</strong> Act as a market maker to profit from the difference between buy and sell prices, leveraging the platform's risk management capabilities.</li>
                 </ul>
+
                 <h3>Netting of the Book</h3>
                 <ul>
                     <li><strong>Netting Efficiency:</strong> Reduce overall risk exposure and optimize capital usage by netting offsetting positions from multiple customers, sharing savings with customers.</li>
                     <li><strong>Risk Management Fees:</strong> Charge for advanced risk management and netting services that reduce margin requirements and trading costs.</li>
                 </ul>
+
                 <h3>Trading of Volatility and Gamma Scalping</h3>
                 <ul>
                     <li><strong>Volatility Trading:</strong> Utilize analytics and market data to identify and trade volatility opportunities, profiting from changes in implied volatility.</li>
                     <li><strong>Gamma Scalping:</strong> Engage in gamma scalping by dynamically hedging options positions to capture small price movements in the underlying asset.</li>
                 </ul>
+
                 <h3>Interest on Initial Margin and Variation Margin</h3>
                 <ul>
                     <li><strong>Margin Financing:</strong> Charge interest on capital provided for initial and variation margin requirements, especially during high volatility periods.</li>
                     <li><strong>Flexible Financing Terms:</strong> Competitive interest rates and flexible repayment schedules to attract more customers and increase margin financing utilization.</li>
                 </ul>
+
                 <h3>Additional Value-Added Services</h3>
                 <ul>
                     <li><strong>Consulting and Advisory:</strong> Provide consulting services to optimize trading strategies, manage risk, and comply with regulations, charging fees for these services.</li>
                     <li><strong>Education and Training:</strong> Offer educational resources and training programs, including webinars, workshops, and certification programs, monetized through participation fees.</li>
                 </ul>
+
                 <h3>Data and Analytics</h3>
                 <ul>
                     <li><strong>Data Subscriptions:</strong> Monetize market data and analytics by offering subscriptions or selling insights to third parties, such as research firms and financial analysts.</li>
@@ -410,21 +467,27 @@
                     <li><strong>Strategic Emphasis:</strong> Significant portion of revenue from Compo category, reflecting dual risk commodity and FX of the customers.</li>
                     <li><strong>Projected Growth:</strong> Projections indicate substantial revenue growth given historical experience, customer base, and network of talent.</li>
                 </ul>
+
                 <h3>Expenses (2024 & 2025)</h3>
                 <ul>
-                    <li><strong>Human Resources:</strong> Personnel expenses account for approximately 30% of total expenses, reflecting investment in skilled professionals.</li>
+                    <li><strong>Human Resources:</strong> Personnel expenses
+
+ account for approximately 30% of total expenses, reflecting investment in skilled professionals.</li>
                     <li><strong>Front Personnel:</strong> Gradually increases from 1 to 6 throughout the year.</li>
                     <li><strong>Back Personnel:</strong> Remains consistent at 4.</li>
                     <li><strong>Travel Expenses:</strong> Approximately 20% allocated to business development and relationship building.</li>
                     <li><strong>Bad Debt Provision:</strong> Constitutes about 37% of total expenses, demonstrating a prudent approach to risk management.</li>
-                    <li><strong>Other Expenses:</strong></li>
-                    <ul>
-                        <li>Office space: $100 per person per month.</li>
-                        <li>IT expenses: $1,000 per person per month.</li>
-                        <li>Miscellaneous expenses: $1,000 per person per month.</li>
-                    </ul>
+                    <li><strong>Other Expenses:</strong>
+                        <ul>
+                            <li>Office space: $100 per person per month.</li>
+                            <li>IT expenses: $1,000 per person per month.</li>
+                            <li>Miscellaneous expenses: $1,000 per person per month.</li>
+                        </ul>
+                    </li>
                 </ul>
+
                 <h3>Profit & Loss Projections</h3>
+                <div id="curve_chart" style="width: 900px; height: 500px"></div>
                 <table>
                     <thead>
                         <tr>
@@ -535,7 +598,9 @@
                         </tr>
                     </tbody>
                 </table>
+
                 <h3>Shareholder Return</h3>
+                <p><strong>Key Financial Metrics for December 2025:</strong></p>
                 <ul>
                     <li><strong>Threshold Limits:</strong> $126,982,562.73</li>
                     <li><strong>Utilization Amount:</strong> $46,983,548.21 (37%)</li>
@@ -545,10 +610,103 @@
                     <li><strong>Return on Lines (ROL) - Net:</strong> 18.29% (Profit/Threshold Utilization)</li>
                     <li><strong>Return on Equity (ROE) for Brazil flow only:</strong> 24% in USD terms</li>
                 </ul>
+                <p>With the additional capital coming from margin financing or debt from our clearing and FX partners, we will be able to grow the customer base, extend more limits, and enter new markets without major investment.</p>
             </section>
 
             <section id="implementation-plan">
-                <h2>Implementation Plan</h2
+                <h2>Implementation Plan</h2>
+                <h3>Phase 1: Planning and Design (Months 1-3)</h3>
+                <ul>
+                    <li>Finalize requirements and design system architecture.</li>
+                    <li>Develop detailed project plan and timelines.</li>
+                </ul>
+                <h3>Phase 2: Development (Months 4-12)</h3>
+                <ul>
+                    <li>Develop frontend and backend systems.</li>
+                    <li>Integrate with CQG’s data feeds and OMS.</li>
+                    <li>Build financing and market maker modules.</li>
+                </ul>
+                <h3>Phase 3: Testing (Months 10-12)</h3>
+                <ul>
+                    <li>Conduct unit, integration, and user acceptance testing.</li>
+                    <li>Perform stress testing and scenario analysis.</li>
+                </ul>
+                <h3>Phase 4: Deployment (Month 13)</h3>
+                <ul>
+                    <li>Deploy the platform on cloud infrastructure.</li>
+                    <li>Set up CI/CD pipelines for continuous deployment.</li>
+                </ul>
+                <h3>Phase 5: Launch and Marketing (Months 14-16)</h3>
+                <ul>
+                    <li>Launch the platform with initial features.</li>
+                    <li>Execute the marketing and sales strategy.</li>
+                </ul>
+                <h3>Phase 6: Ongoing Development and Maintenance (Month 17 onwards)</h3>
+                <ul>
+                    <li>Continuous monitoring and improvement.</li>
+                    <li>Regular updates and feature additions.</li>
+                </ul>
+            </section>
+
+            <section id="risk-management">
+                <h2>Risk Management</h2>
+                <p>Soma XT recognizes the various risks inherent in the commodities trading and financing business. Effective risk management is crucial to ensure the stability and success of our operations. This section outlines the primary risks and the strategies we employ to mitigate them.</p>
+
+                <h3>Key Risks and Mitigations</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Risk Type</th>
+                            <th>Description</th>
+                            <th>Mitigation Strategies</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Market Risk</td>
+                            <td>Commodity price fluctuations</td>
+                            <td>
+                                <ul>
+                                    <li>Utilize well-defined stabilized trading limits per commodities, country-regions, and counterparties</li>
+                                    <li>Maintain a diversified portfolio of clients on both the buy and sell side with reverse correlation to spread risk</li>
+
+
+                                    <li>Utilize OTM options to protect against market movements impacting book liquidity</li>
+                                    <li>Regularly monitor and adjust positions based on market conditions</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Credit Risk</td>
+                            <td>Counterparty default</td>
+                            <td>
+                                <ul>
+                                    <li>Conduct thorough KYC and KYCB processes</li>
+                                    <li>Perform deep credit assessments of counterparties</li>
+                                    <li>Establish credit thresholds and margin requirements</li>
+                                    <li>Secure collateral to cover exposures</li>
+                                    <li>Utilize different instruments for credit protection and collection</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Liquidity Risk</td>
+                            <td>Inability to meet short-term financial demands</td>
+                            <td>
+                                <ul>
+                                    <li>Maintain a well-capitalized balance sheet to support trading activities</li>
+                                    <li>Implement liquidity management protocols (limits and monitoring)</li>
+                                    <li>Engage in bilateral agreements with exchanges and brokers for efficient margining</li>
+                                    <li>Secure cash and funding by leveraging customer collateral</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Operational Risk</td>
+                            <td>System failures, data breaches, and operational disruptions</td>
+                            <td>
+                                <ul>
+                                    <li>Invest in robust automated trading systems and infrastructure powered by CQG’s technology</li>
                                     <li>Implement strict operational controls and regular audits</li>
                                     <li>Establish Disaster Recovery and Business Continuity Plans</li>
                                     <li>Train staff on best practices and risk management protocols</li>
@@ -633,51 +791,9 @@
                 <h2>Organization Management & Legal Structure</h2>
                 <h3>Organizational Structure</h3>
                 <p>The success of any business venture relies heavily on the expertise, leadership, and coordination of its management team. In this section, we provide an overview of Soma XT's initial organizational structure and the key individuals who drive the company's strategic vision and day-to-day operations.</p>
+
                 <p>As we navigate the complexities of the agricultural market, our organizational structure is designed to foster collaboration, efficiency, and accountability across all levels of the company. Each member of our management team brings unique skills and perspectives to their respective roles, contributing to Soma XT's mission of revolutionizing risk management and trading strategies in the agribusiness industry.</p>
+
                 <h3>Key Roles and Responsibilities</h3>
                 <ul>
-                    <li><strong>Chief Executive Officer (CEO):</strong> Provides overall leadership and strategic direction for Soma XT. Drives the company's mission of revolutionizing risk management and trading strategies in the agricultural market. Responsible for setting clear goals, making high-level decisions, and ensuring the company's vision is effectively communicated and executed.</li>
-                    <li><strong>Chief Commercial Officer - Risk Management (CCO):</strong> Plays a critical role in driving revenue growth and expanding Soma XT's client base across multiple commodity sectors, including grains, energy, metals, and softs. Develops and executes strategic sales and marketing initiatives to capture market share and maximize profitability. Oversees customer relations, market research, branding initiatives, and the Trading Academy.</li>
-                    <li><strong>Chief Trading Officer (CTO):</strong> Central to driving the company's trading activities and optimizing its trading strategies across various commodity sectors. Responsible for developing and executing innovative trading models, managing the trade book, and maximizing returns while effectively managing risk.</li>
-                    <li><strong>Chief Operating Officer (COO):</strong> Instrumental in driving operational excellence, optimizing efficiency, and ensuring the seamless execution of the company's business activities. Oversees both traditional operational functions and strategic technology initiatives, aligning business operations with the company's strategic objectives and leveraging technology to enhance performance and innovation.</li>
-                    <li><strong>Chief Risk Officer (CRO):</strong> Plays a vital role in safeguarding the company's interests and ensuring the integrity of its operations amidst the complexities of the commodities market. Develops and implements robust risk management strategies to mitigate market risk and counterpart risk effectively.</li>
-                    <li><strong>Controller:</strong> Responsible for the financial reporting, accounting, and overall financial management of Soma XT. Ensures accurate financial records and compliance with regulatory requirements.</li>
-                </ul>
-                <h3>Legal Structure</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Entity</th>
-                            <th>Function</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Soma XT Holding</td>
-                            <td>Parent company</td>
-                        </tr>
-                        <tr>
-                            <td>Soma XT USA</td>
-                            <td>Staff seating and market development activities in the USA</td>
-                        </tr>
-                        <tr>
-                            <td>SXT Markets</td>
-                            <td>Centralized booking entity for OTC</td>
-                        </tr>
-                        <tr>
-                            <td>Soma XT Brazil</td>
-                            <td>Staff seating and market development activities in Brazil</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <section id="conclusion">
-                <h2>Conclusion</h2>
-                <p>Soma XT, in partnership with CQG, is poised to revolutionize the OTC trading space by integrating trading, risk management, and margin call financing into a seamless platform. This comprehensive solution addresses the needs of hedgers, market makers, and financiers, offering unparalleled transparency, efficiency, and accessibility.</p>
-                <p>By providing immediate margin call coverage, custom tools for market makers, and seamless integration with CQG’s infrastructure, Soma XT stands out as a transformative player in the industry. The strategic plan, robust compliance framework, innovative features, and multiple monetization strategies position Soma XT for rapid adoption and growth, fulfilling its mission to revolutionize OTC trading.</p>
-            </section>
-        </main>
-    </div>
-</body>
-</html>
+                    <li><
