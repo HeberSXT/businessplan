@@ -3,33 +3,14 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
 }
 
 header {
-    background: #28a745;
+    background-color: #4CAF50;
     color: #fff;
-    padding: 10px 0;
+    padding: 1rem 0;
     text-align: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
-.container {
-    display: flex;
-    margin-top: 60px;
-}
-
-nav {
-    width: 200px;
-    position: fixed;
-    top: 60px;
-    bottom: 0;
-    overflow-y: auto;
-    background: #f8f9fa;
-    padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -38,64 +19,67 @@ nav ul {
 }
 
 nav ul li {
-    margin: 10px 0;
+    display: inline;
+    margin-right: 10px;
 }
 
 nav ul li a {
+    color: #fff;
     text-decoration: none;
-    color: #007bff;
     font-weight: bold;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+.container {
+    display: flex;
+    flex-direction: row;
 }
 
 main {
     flex: 1;
-    margin-left: 220px;
-    padding: 20px;
+    padding: 2rem;
 }
 
-h1, h2, h3, h4 {
+section {
+    margin-bottom: 2rem;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
     color: #333;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
 }
 
-table th, table td {
+table, th, td {
     border: 1px solid #ddd;
-    padding: 8px;
+}
+
+th, td {
+    padding: 0.5rem;
     text-align: left;
 }
 
-table th {
-    background-color: #f2f2f2;
+th {
+    background-color: #f4f4f4;
 }
 
-.chart {
-    text-align: center;
-    margin: 20px 0;
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
-.kanban-board {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.kanban-column {
-    flex: 1;
-    background: #f8f9fa;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.kanban-column h3 {
-    margin-top: 0;
+.chart-container {
+    position: relative;
+    margin: auto;
+    height: 50vh;
+    width: 80vw;
 }
