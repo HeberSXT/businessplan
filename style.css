@@ -1,83 +1,60 @@
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
 }
 
 header {
-    background-color: #333;
-    color: white;
-    padding: 1em 0;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 1rem 0;
     text-align: center;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
 }
 
-header h1 {
-    margin: 0;
-}
-
-header nav ul {
+nav ul {
     list-style: none;
-    margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 1em;
 }
 
-header nav ul li {
+nav ul li {
     display: inline;
+    margin-right: 10px;
 }
 
-header nav ul li a {
-    color: white;
+nav ul li a {
+    color: #fff;
     text-decoration: none;
-    padding: 0.5em;
-}
-
-header nav ul li a:hover {
-    background-color: #555;
-    border-radius: 4px;
+    font-weight: bold;
 }
 
 .container {
     display: flex;
-    flex-direction: column;
-    padding-top: 5em; /* Adjusted for fixed header */
+    flex-direction: row;
 }
 
 main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1em;
-    line-height: 1.6;
+    flex: 1;
+    padding: 2rem;
 }
 
-h2 {
-    border-bottom: 2px solid #333;
-    padding-bottom: 0.5em;
-    margin-top: 2em;
+section {
+    margin-bottom: 2rem;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h3 {
-    margin-top: 1.5em;
-}
-
-h4 {
-    margin-top: 1.2em;
-}
-
-ul {
-    margin: 1em 0;
-    padding-left: 1.5em;
+h1, h2, h3 {
+    color: #333;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 1em 0;
+    margin-bottom: 1rem;
 }
 
 table, th, td {
@@ -85,7 +62,7 @@ table, th, td {
 }
 
 th, td {
-    padding: 0.5em;
+    padding: 0.5rem;
     text-align: left;
 }
 
@@ -93,20 +70,16 @@ th {
     background-color: #f4f4f4;
 }
 
-#kanban {
-    display: flex;
-    gap: 1em;
-    overflow-x: auto;
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
-.kanban-column {
-    flex: 0 0 200px;
-    border: 1px solid #ddd;
-    padding: 1em;
-    background-color: #f9f9f9;
-    border-radius: 4px;
-}
-
-canvas {
-    margin-top: 1em;
+.chart-container {
+    position: relative;
+    margin: auto;
+    height: 50vh;
+    width: 80vw;
 }
