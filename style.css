@@ -1,32 +1,31 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.8;
-    margin: 0;
-    padding: 0;
+background-color: #f4f4f4;
     color: #333;
-    background: #f4f4f4;
+    line-height: 1.6;
 }
 
 header {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
+    background: #333;
+    color: #fff;
     padding: 20px 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
 }
 
 .container {
     display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 nav {
-    width: 250px;
-    background: #2c3e50;
+    flex: 1;
+    background: #f4f4f4;
     padding: 20px;
-    height: 100vh;
-    position: fixed;
-    overflow-y: auto;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 }
 
 nav ul {
@@ -35,60 +34,44 @@ nav ul {
 }
 
 nav ul li {
-    margin: 20px 0;
+    margin-bottom: 10px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: white;
-    font-weight: bold;
+    color: #333;
     display: block;
     padding: 10px;
-    border-radius: 5px;
+    background: #ddd;
+    border-radius: 4px;
+    transition: background 0.3s;
 }
 
 nav ul li a:hover {
-    background: #34495e;
+    background: #bbb;
 }
 
 main {
-    margin-left: 270px;
+    flex: 3;
     padding: 20px;
-    width: calc(100% - 270px);
-    background: white;
-    height: 100vh;
-    overflow-y: auto;
-    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
-}
-
-h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+    background: #fff;
+    border-radius: 4px;
 }
 
 h2 {
-    font-size: 2em;
-    color: #4CAF50;
-    border-bottom: 2px solid #4CAF50;
-    padding-bottom: 5px;
-    margin-top: 30px;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
 }
 
 h3 {
-    font-size: 1.5em;
-    color: #333;
-    margin-top: 20px;
-}
-
-p, ul, li, table {
-    margin-bottom: 20px;
+    color: #555;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
-    background: #f9f9f9;
+    margin-bottom: 20px;
 }
 
 table, th, td {
@@ -96,20 +79,30 @@ table, th, td {
 }
 
 th, td {
-    padding: 12px;
+    padding: 10px;
     text-align: left;
 }
 
 th {
-    background-color: #f4f4f4;
-    color: #333;
+    background: #f4f4f4;
 }
 
 ul {
-    list-style-type: disc;
-    margin: 10px 0 10px 20px;
+    padding-left: 20px;
 }
 
-ul ul {
-    list-style-type: circle;
+ul li {
+    margin-bottom: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#curve_chart {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 20px;
 }
