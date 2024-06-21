@@ -1,19 +1,23 @@
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
 header {
     background: #333;
     color: #fff;
-    padding: 1em 0;
+    padding: 1rem 0;
     text-align: center;
 }
 
 header h1 {
     margin: 0;
+}
+
+nav {
+    margin-top: 1rem;
 }
 
 nav ul {
@@ -23,7 +27,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-right: 1em;
+    margin: 0 10px;
 }
 
 nav ul li a {
@@ -32,25 +36,47 @@ nav ul li a {
 }
 
 main {
-    padding: 1em;
+    padding: 2rem;
+    background: #f4f4f4;
 }
 
-section {
-    margin-bottom: 2em;
+main section {
+    margin-bottom: 2rem;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-section h2 {
-    border-bottom: 2px solid #333;
-    padding-bottom: 0.5em;
+main h2 {
+    margin-top: 0;
 }
 
 footer {
     background: #333;
     color: #fff;
     text-align: center;
-    padding: 1em 0;
+    padding: 1rem 0;
     position: fixed;
-    width: 100%;
     bottom: 0;
+    width: 100%;
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 0.5rem;
+    text-align: left;
+}
+
+th {
+    background: #f4f4f4;
+}
